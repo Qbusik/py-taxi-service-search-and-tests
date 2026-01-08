@@ -24,8 +24,14 @@ class PrivatePagesAndSearchTest(TestCase):
         self.client.force_login(self.user)
 
     def test_retrieve_and_search(self):
-        manufacturer_1 = Manufacturer.objects.create(name="Test11", country="USA")
-        manufacturer_2 = Manufacturer.objects.create(name="Test22", country="USB")
+        manufacturer_1 = Manufacturer.objects.create(
+            name="Test11",
+            country="USA"
+        )
+        manufacturer_2 = Manufacturer.objects.create(
+            name="Test22",
+            country="USB"
+        )
         Car.objects.create(model="model_A", manufacturer=manufacturer_1)
         Car.objects.create(model="model_B", manufacturer=manufacturer_2)
 
