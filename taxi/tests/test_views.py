@@ -72,7 +72,7 @@ class PrivatePagesAndSearchTest(TestCase):
         result = list(response.context["car_list"])
         self.assertEqual(len(result), 1)
 
-        response = self.client.get(CAR_URL, {"name": ""})
+        response = self.client.get(CAR_URL, {"model": ""})
         self.assertEqual(response.status_code, 200)
         result = list(response.context["car_list"])
         self.assertEqual(len(result), 2)
