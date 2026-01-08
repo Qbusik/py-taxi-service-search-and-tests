@@ -26,12 +26,6 @@ class ModelsTests(TestCase):
         )
 
     def test_cars_str(self):
-        get_user_model().objects.create(
-            username="test_t",
-            password="1234",
-            first_name="Test",
-            last_name="Tester",
-        )
         manufacturer = Manufacturer.objects.create(
             name="Test22",
             country="USA"
